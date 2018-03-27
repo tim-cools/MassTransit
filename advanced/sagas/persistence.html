@@ -1,0 +1,1966 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Persistence · MassTransit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../build/gitbook.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../courier/" />
+    
+    
+    <link rel="prev" href="automatonymous.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Overview</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../understand/">
+            
+                <a href="../../understand/">
+            
+                    
+                    Understanding MassTransit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../understand/key-ideas.html">
+            
+                <a href="../../understand/key-ideas.html">
+            
+                    
+                    Key terminology
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../understand/under-the-hood.html">
+            
+                <a href="../../understand/under-the-hood.html">
+            
+                    
+                    Under the hood
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../understand/default-topology.html">
+            
+                <a href="../../understand/default-topology.html">
+            
+                    
+                    Topology
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../understand/additions-to-transport.html">
+            
+                <a href="../../understand/additions-to-transport.html">
+            
+                    
+                    What we add to the transport
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../understand/publishing.html">
+            
+                <a href="../../understand/publishing.html">
+            
+                    
+                    Publishing messages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../understand/sending.md">
+            
+                <span>
+            
+                    
+                    Sending messages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../understand/message-contracts.html">
+            
+                <a href="../../understand/message-contracts.html">
+            
+                    
+                    Message contract design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../understand/perfcounters.html">
+            
+                <a href="../../understand/perfcounters.html">
+            
+                    
+                    Performance counters
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../quickstart.html">
+            
+                <a href="../../quickstart.html">
+            
+                    
+                    Quick Start!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../introduction/getting-help.html">
+            
+                <a href="../../introduction/getting-help.html">
+            
+                    
+                    I need help!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../learn/">
+            
+                <a href="../../learn/">
+            
+                    
+                    Learning MassTransit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../learn/samples/">
+            
+                <a href="../../learn/samples/">
+            
+                    
+                    Samples
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../learn/samples/courier.html">
+            
+                <a href="../../learn/samples/courier.html">
+            
+                    
+                    Courier
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../../learn/samples/request-response.html">
+            
+                <a href="../../learn/samples/request-response.html">
+            
+                    
+                    Request/Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../../learn/samples/saga.html">
+            
+                <a href="../../learn/samples/saga.html">
+            
+                    
+                    Saga
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../learn/videos.html">
+            
+                <a href="../../learn/videos.html">
+            
+                    
+                    Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../learn/courses.html">
+            
+                <a href="../../learn/courses.html">
+            
+                    
+                    Courses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../learn/loving-the-community.html">
+            
+                <a href="../../learn/loving-the-community.html">
+            
+                    
+                    Loving the community
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../contributing/">
+            
+                <a href="../../contributing/">
+            
+                    
+                    Contributing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Usage</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../introduction/">
+            
+                <a href="../../introduction/">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../introduction/prerequisites.html">
+            
+                <a href="../../introduction/prerequisites.html">
+            
+                    
+                    Prerequisites
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../introduction/how-to-install.html">
+            
+                <a href="../../introduction/how-to-install.html">
+            
+                    
+                    How to install
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../introduction/getting-help.html">
+            
+                <a href="../../introduction/getting-help.html">
+            
+                    
+                    Getting help
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../../introduction/how-to-report-bugs.html">
+            
+                <a href="../../introduction/how-to-report-bugs.html">
+            
+                    
+                    How to report bugs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../usage/">
+            
+                <a href="../../usage/">
+            
+                    
+                    Using MassTransit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../../usage/configuration.html">
+            
+                <a href="../../usage/configuration.html">
+            
+                    
+                    Configure MassTransit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../../usage/transports.html">
+            
+                <a href="../../usage/transports.html">
+            
+                    
+                    Choose a transport
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../../usage/message-contracts.html">
+            
+                <a href="../../usage/message-contracts.html">
+            
+                    
+                    Create message contracts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../../usage/message-consumers.html">
+            
+                <a href="../../usage/message-consumers.html">
+            
+                    
+                    Create message consumers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="../../usage/producing-messages.html">
+            
+                <a href="../../usage/producing-messages.html">
+            
+                    
+                    Produce messages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="../../usage/correlation.html">
+            
+                <a href="../../usage/correlation.html">
+            
+                    
+                    Correlate messages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="../../usage/containers/">
+            
+                <a href="../../usage/containers/">
+            
+                    
+                    Use IoC container
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.7.1" data-path="../../usage/containers/autofac.html">
+            
+                <a href="../../usage/containers/autofac.html">
+            
+                    
+                    Autofac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7.2" data-path="../../usage/containers/ninject.html">
+            
+                <a href="../../usage/containers/ninject.html">
+            
+                    
+                    Ninject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7.3" data-path="../../usage/containers/structuremap.html">
+            
+                <a href="../../usage/containers/structuremap.html">
+            
+                    
+                    StructureMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7.4" data-path="../../usage/containers/unity.html">
+            
+                <a href="../../usage/containers/unity.html">
+            
+                    
+                    Unity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7.5" data-path="../../usage/containers/castlewindsor.html">
+            
+                <a href="../../usage/containers/castlewindsor.html">
+            
+                    
+                    Castle Windsor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="../../usage/request-response.html">
+            
+                <a href="../../usage/request-response.html">
+            
+                    
+                    Request/response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.9" data-path="../../usage/exceptions.html">
+            
+                <a href="../../usage/exceptions.html">
+            
+                    
+                    Handle exceptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10" data-path="../../usage/retries.html">
+            
+                <a href="../../usage/retries.html">
+            
+                    
+                    Configure retries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.11" data-path="../../usage/scheduling/">
+            
+                <a href="../../usage/scheduling/">
+            
+                    
+                    Schedule messages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.11.1" data-path="../../usage/scheduling/scheduling-api.html">
+            
+                <a href="../../usage/scheduling/scheduling-api.html">
+            
+                    
+                    Scheduling API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.11.2" data-path="../../usage/scheduling/in-memory.html">
+            
+                <a href="../../usage/scheduling/in-memory.html">
+            
+                    
+                    In-memory scheduling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.11.3" data-path="../../usage/scheduling/azure-sb-scheduler.html">
+            
+                <a href="../../usage/scheduling/azure-sb-scheduler.html">
+            
+                    
+                    Azure Service Bus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.11.4" data-path="../../usage/scheduling/rabbitmq-delayed.html">
+            
+                <a href="../../usage/scheduling/rabbitmq-delayed.html">
+            
+                    
+                    RabbitMQ Delayed Exchange
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.11.5" data-path="../../usage/scheduling/redeliver.html">
+            
+                <a href="../../usage/scheduling/redeliver.html">
+            
+                    
+                    Redelivering messages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.12" data-path="../../usage/observers.html">
+            
+                <a href="../../usage/observers.html">
+            
+                    
+                    Observe messages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.13" data-path="../../usage/lifecycle-observers.html">
+            
+                <a href="../../usage/lifecycle-observers.html">
+            
+                    
+                    Observe lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.14" data-path="../../usage/connect-endpoint.html">
+            
+                <a href="../../usage/connect-endpoint.html">
+            
+                    
+                    Connect endpoints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.15" data-path="../../usage/logging.html">
+            
+                <a href="../../usage/logging.html">
+            
+                    
+                    Logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.16" data-path="../../usage/testing/">
+            
+                <a href="../../usage/testing/">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.16.1" data-path="../../usage/testing/bus-harness.html">
+            
+                <a href="../../usage/testing/bus-harness.html">
+            
+                    
+                    Bus harness
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.16.2" data-path="../../usage/testing/testing-consumers.html">
+            
+                <a href="../../usage/testing/testing-consumers.html">
+            
+                    
+                    Testing consumers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.16.3" data-path="../../usage/testing/testing-sagas.html">
+            
+                <a href="../../usage/testing/testing-sagas.html">
+            
+                    
+                    Testing sagas
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Advanced</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Sagas
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="automatonymous.html">
+            
+                <a href="automatonymous.html">
+            
+                    
+                    Automatonymous
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.1.2" data-path="persistence.html">
+            
+                <a href="persistence.html">
+            
+                    
+                    Persistence
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../courier/">
+            
+                <a href="../courier/">
+            
+                    
+                    Courier
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../courier/activities.html">
+            
+                <a href="../courier/activities.html">
+            
+                    
+                    Activities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../courier/builder.html">
+            
+                <a href="../courier/builder.html">
+            
+                    
+                    Builder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../courier/execute.html">
+            
+                <a href="../courier/execute.html">
+            
+                    
+                    Execution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../courier/events.html">
+            
+                <a href="../courier/events.html">
+            
+                    
+                    Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../courier/subscriptions.html">
+            
+                <a href="../courier/subscriptions.html">
+            
+                    
+                    Subscriptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../middleware/">
+            
+                <a href="../middleware/">
+            
+                    
+                    Middleware
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../middleware/circuit-breaker.html">
+            
+                <a href="../middleware/circuit-breaker.html">
+            
+                    
+                    Circuit breaker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../middleware/rate-limiter.html">
+            
+                <a href="../middleware/rate-limiter.html">
+            
+                    
+                    Rate limiter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../middleware/latest.html">
+            
+                <a href="../middleware/latest.html">
+            
+                    
+                    Latest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="../middleware/custom.html">
+            
+                <a href="../middleware/custom.html">
+            
+                    
+                    Custom
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../audit/">
+            
+                <a href="../audit/">
+            
+                    
+                    Audit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../turnout/">
+            
+                <a href="../turnout/">
+            
+                    
+                    Turnout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../versioning.html">
+            
+                <a href="../versioning.html">
+            
+                    
+                    Versioning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../topology/">
+            
+                <a href="../topology/">
+            
+                    
+                    Topology
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.1" data-path="../topology/message.html">
+            
+                <a href="../topology/message.html">
+            
+                    
+                    Message
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.2" data-path="../topology/publish.html">
+            
+                <a href="../topology/publish.html">
+            
+                    
+                    Publish
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.3" data-path="../topology/send.html">
+            
+                <a href="../topology/send.html">
+            
+                    
+                    Send
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.4" data-path="../topology/consume.html">
+            
+                <a href="../topology/consume.html">
+            
+                    
+                    Consume
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.5" data-path="../topology/conventions.html">
+            
+                <a href="../topology/conventions.html">
+            
+                    
+                    Conventions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.6" data-path="../topology/rabbitmq/">
+            
+                <a href="../topology/rabbitmq/">
+            
+                    
+                    RabbitMQ
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.6.1" data-path="../topology/rabbitmq/binding.html">
+            
+                <a href="../topology/rabbitmq/binding.html">
+            
+                    
+                    Exchange Binding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.6.2" data-path="../topology/rabbitmq/routingkey.html">
+            
+                <a href="../topology/rabbitmq/routingkey.html">
+            
+                    
+                    RoutingKey
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.7" data-path="../topology/servicebus/">
+            
+                <a href="../topology/servicebus/">
+            
+                    
+                    Azure Service Bus
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.7.1" data-path="../topology/servicebus/sessionid.html">
+            
+                <a href="../topology/servicebus/sessionid.html">
+            
+                    
+                    SessionId
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.7.2" data-path="../topology/servicebus/partitionkey.html">
+            
+                <a href="../topology/servicebus/partitionkey.html">
+            
+                    
+                    PartitionKey
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.7.3" data-path="../topology/servicebus/topicsub.html">
+            
+                <a href="../topology/servicebus/topicsub.html">
+            
+                    
+                    Topic Subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../transactions.html">
+            
+                <a href="../transactions.html">
+            
+                    
+                    Transactions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="../interoperability.html">
+            
+                <a href="../interoperability.html">
+            
+                    
+                    Interoperability
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Troubleshooting</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../troubleshooting/">
+            
+                <a href="../../troubleshooting/">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../troubleshooting/common-gotchas.html">
+            
+                <a href="../../troubleshooting/common-gotchas.html">
+            
+                    
+                    Common gotchas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../troubleshooting/show-config.html">
+            
+                <a href="../../troubleshooting/show-config.html">
+            
+                    
+                    Diagnostics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Architecture</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../architecture/">
+            
+                <a href="../../architecture/">
+            
+                    
+                    Articles
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../architecture/green-cache.html">
+            
+                <a href="../../architecture/green-cache.html">
+            
+                    
+                    Green Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Persistence</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="persisting-saga-instances">Persisting Saga Instances</h1>
+<p>Sagas are stateful event-based message consumers -- they retain state. Therefore, saving state between 
+events is important. Without persistent state, a saga would consider each event a new event, and orchestration 
+of subsequent events would be meaningless.</p>
+<ul>
+<li><a href="#specifying-saga-persistence">Specifying saga persistence</a></li>
+<li><a href="#identity">Identity</a></li>
+<li><a href="#publishing-and-sending-from-sagas">Publishing and Sending From Sagas</a></li>
+<li><a href="#storage-engines">Storage Engines</a><ul>
+<li><a href="#entity-framework">Entity Framework</a></li>
+<li><a href="#mongodb">MongoDB</a></li>
+<li><a href="#nhibernate">NHibernate</a></li>
+<li><a href="#redis">Redis</a></li>
+<li><a href="#marten">Marten</a></li>
+<li><a href="#azure-service-bus">Azure Service Bus</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="specifying-saga-persistence">Specifying saga persistence</h2>
+<p>In order to store the saga state, you need to use one form of saga persistence. There are several
+types of storage that MassTransit supports, all of those, which are included to the main distribution,
+are listed below. There is also a in-memory unreliable storage, which allows to temporarily store
+your saga state. It is useful to try things out since it does not require any infrastructure.</p>
+<p>Simple initialization of a state machine saga with persistence looks like this:</p>
+<pre class="language-"><code class="lang-csharp"><span class="token keyword">var</span> sagaStateMachine <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ShoppingCartStateMachine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> repository <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">InMemorySagaRepository</span><span class="token operator">&lt;</span>ShoppingCart<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> busControl <span class="token operator">=</span> Bus<span class="token punctuation">.</span>Factory<span class="token punctuation">.</span><span class="token function">CreateUsingRabbitMq</span><span class="token punctuation">(</span>x <span class="token operator">=</span><span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">var</span> host <span class="token operator">=</span> x<span class="token punctuation">.</span><span class="token function">Host</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Uri</span><span class="token punctuation">(</span><span class="token string">&quot;rabbitmq://localhost&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> h <span class="token operator">=</span><span class="token operator">&gt;</span>
+    <span class="token punctuation">{</span>
+        h<span class="token punctuation">.</span><span class="token function">Username</span><span class="token punctuation">(</span><span class="token string">&quot;guest&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        h<span class="token punctuation">.</span><span class="token function">Password</span><span class="token punctuation">(</span><span class="token string">&quot;guest&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    x<span class="token punctuation">.</span><span class="token function">ReceiveEndpoint</span><span class="token punctuation">(</span>host<span class="token punctuation">,</span> <span class="token string">&quot;shopping_cart_state&quot;</span><span class="token punctuation">,</span> e <span class="token operator">=</span><span class="token operator">&gt;</span>
+    <span class="token punctuation">{</span>
+        e<span class="token punctuation">.</span><span class="token function">StateMachineSaga</span><span class="token punctuation">(</span>sagaStateMachine<span class="token punctuation">,</span> repository<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>It is important to notice that the saga repository object is a singleton. It does not hold any state
+inside the class instance and only performs operations on the saga state objects that are send to it
+to persist and retrieve.</p>
+<p>There are two types of saga repository:</p>
+<ul>
+<li>Query repository</li>
+<li>Identity-only repository</li>
+</ul>
+<p>Depending on the persistence mechanism, repository implementation can be either identity-only or
+identity plus query.</p>
+<p>When using identity-only repository, such as Azure Service Bus message session or Redis, you can
+only use correlation by identity. This means that all events that the saga receives, must hold
+the saga correlation id, and the correlation for each event can only use <code>CorrelateById</code> method 
+to define the correlation.</p>
+<p>Query repository by definition support identity correlation too, but in addition support other
+properties of events being received and saga state properties. Such correlations are defined using
+<code>CorrelateBy</code> method and you can use any logical expression that involve the event data and
+saga state data to establish such correlation. Repository implementation such as Entity Framework,
+NHibernate and Marten support correlation by query. Of course, in-memory repository supports it as well.</p>
+<h2 id="identity">Identity</h2>
+<p>Saga instances are identified by a unique identifier (<code>Guid</code>), represented by the <code>CorrelationId</code> on the saga instance. 
+Events are correlated to the saga instance using either the unique identifier, or alternatively using an expression 
+that correlates properties on the saga instance to each event. If the <code>CorrelationId</code> is used, it&apos;s always a 
+one-to-one match, either the saga already exists, or it&apos;s a new saga instance. With a correlation expression, 
+the expression might match to more than one saga instance, so care should be used -- because the event would be 
+delivered to all matching instances.</p>
+<blockquote>
+<p>Seriously, don&apos;t sent an event to all instances -- unless you want to watch your messages consumers lock 
+your entire saga storage engine.</p>
+</blockquote>
+<p>It is strongly advised to have <code>CorrelationId</code> as your table/document key. This will enable better
+concurrency handling and will make the saga state consistent.</p>
+<h2 id="publishing-and-sending-from-sagas">Publishing and Sending From Sagas</h2>
+<p>Sagas are completely message-driven and therefore not only consume but also publish events and send commands. 
+However, if your saga received a lot of messages coming roughly at the same time and the endpoint is set to 
+process multiple messages in parallel - this can lead to a conflict between message processing and saga persistence.</p>
+<p>This means that there could be more than one saga state updates that are being persisted at the same time. 
+Depending on the saga repository type, this might fail for different reasons - versioning issue, row or table 
+lock or eTag mismatch. All those problems are basically saying that you are having a concurrency issue.</p>
+<p>It is normal for the saga repository to throw an exception in such case but if your saga is publishing messages, 
+they were already published but the saga state has not been updated. MassTransit will eventually use retry policy 
+on the endpoint and more messages will be send, potentially leading to mess. Or, if there are no retry policies 
+configured, messages might be sent indicating that the process needs to continue but saga instance will be in the 
+old state and will not accept any further messages because they will come in a wrong state.</p>
+<p>This issue is common and can be solved by postponing the message publish and send operations until all 
+persistence work is done. All messages that should be published, are collected in a buffer, which is 
+called <em>Outbox</em>. MassTransit implements this feature and it can be configured by adding these lines to your 
+endpoint configuration:</p>
+<pre class="language-"><code class="lang-csharp">c<span class="token punctuation">.</span><span class="token function">ReceiveEndpoint</span><span class="token punctuation">(</span><span class="token string">&quot;queue&quot;</span><span class="token punctuation">,</span> e <span class="token operator">=</span><span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">UseInMemoryOutbox</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// other endpoint configuration here</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="storage-engines">Storage Engines</h2>
+<p>MassTransit supports several storage engines, including NHibernate, Entity Framework, MongoDB and Redis. 
+Each of these are setup in a similar way, but examples are shown below for each engine.</p>
+<ul>
+<li><a href="#entity-framework">Entity Framework</a></li>
+<li><a href="#nhibernate">NHibernate</a></li>
+<li><a href="#mongodb">MondoDB</a></li>
+<li><a href="#redis">Redis</a></li>
+<li><a href="#marten">Marten</a></li>
+<li><a href="#azure-service-bus">Azure Service Bus</a></li>
+</ul>
+<h3 id="optimistic-vs-pessimistic-concurrency">Optimistic vs pessimistic concurrency</h3>
+<p>Most persistence mechanisms for sagas supported by MassTransit need some way to guarantee ACID when processing sagas. 
+Because there can be multiple threads <em>consuming</em> multiple bus events meant for the same saga instance, 
+they could end up overwriting each other (race condition). </p>
+<p>Relational databases can easily handle this by setting the transaction type to <em>serializable</em> or (page/row) locking. 
+This would be considered as <em>pessimistic concurrency</em>.</p>
+<p>Another way to handle concurrency is to have some attribute like version or timestamp, which updates
+every time a saga is persisted. By doing that we can instruct the database only to update the
+record if this attribute matches between what we are trying to persist and what is stored in the 
+database record we are trying to update.</p>
+<p>This is type of concurrency is called an <em>optimistic concurrency</em>. 
+It doesn&apos;t guarantee your unit of work with the database will succeed (must retry after these exceptions), 
+but it also doesn&apos;t block anybody else from working within the same database page (not locking the table/page).</p>
+<h4 id="so-which-one-should-i-use">So, which one should I use?</h4>
+<p>For almost every scenario, it is recommended using the optimistic concurrency, because most state machine 
+logic should be fairly quick. </p>
+<p>If the chosen persistence method supports optimistic concurrency, race conditions can be handled rather
+easily by specifying a retry policy for concurrency exceptions or using generic retry policy.</p>
+<h3 id="entity-framework">Entity Framework</h3>
+<p>Entity Framework seems to be the most common ORM for class-SQL mappings, and SQL is still widely used 
+for storing data. So it&apos;s a win to have it supported out of the box by MassTransit.</p>
+<h4 id="concurrency-handling">Concurrency handling</h4>
+<p>Fortunately, Entity Framework is a repository pattern itself, and has a column type <code>[Timestamp]</code> 
+(a.k.a. <code>IsRowVersion</code> with fluent mapping), which will check the value of the column when it starts it&apos;s 
+&quot;unit of work&quot; and if that value is the same when updating that row in the database - everybody is happy! 
+But, if that column value is different, then it has been updated elsewhere. 
+So, the Entity Framework will throw a <code>DbUpdateConcurrencyException</code>, which can be handled by a retry policy
+to fix the concurrency violation.</p>
+<h4 id="configuration-and-usage">Configuration and usage</h4>
+<p>The code-first mapping example below shows the basics of getting started. The lines have been commented
+where the additional optimistic concurrency column is needed.</p>
+<pre class="language-"><code class="lang-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SagaInstance</span> <span class="token punctuation">:</span> SagaStateMachineInstance
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token function">SagaInstance</span><span class="token punctuation">(</span>Guid correlationId<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        CorrelationId <span class="token operator">=</span> correlationId<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">protected</span> <span class="token function">SagaInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">string</span> CurrentState <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">string</span> ServiceName <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> Guid CorrelationId <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> RowVersion <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span> <span class="token comment" spellcheck="true">// For Optimistic Concurrency</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SagaInstanceMap</span> <span class="token punctuation">:</span> SagaClassMapping<span class="token operator">&lt;</span>SagaInstance<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token function">SagaInstanceMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">Property</span><span class="token punctuation">(</span>x <span class="token operator">=</span><span class="token operator">&gt;</span> x<span class="token punctuation">.</span>CurrentState<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">Property</span><span class="token punctuation">(</span>x <span class="token operator">=</span><span class="token operator">&gt;</span> x<span class="token punctuation">.</span>ServiceName<span class="token punctuation">,</span> x <span class="token operator">=</span><span class="token operator">&gt;</span> x<span class="token punctuation">.</span><span class="token function">Length</span><span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">Property</span><span class="token punctuation">(</span>x <span class="token operator">=</span><span class="token operator">&gt;</span> x<span class="token punctuation">.</span>RowVersion<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">IsRowVersion</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// For Optimistic Concurrency</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p>Important:
+The <code>SagaClassMapping</code> has default mapping for the <code>CorrelationId</code> as a database generated primary key.
+If you use your own mapping, you must follow the same convention, otherwise there is a big chance to
+get deadlock exceptions in case of high throughput.</p>
+</blockquote>
+<p>The repository is then created on the context factory:</p>
+<pre class="language-"><code class="lang-csharp">SagaDbContextFactory contextFactory <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> 
+    <span class="token keyword">new</span> <span class="token class-name">SagaDbContext</span><span class="token operator">&lt;</span>SagaInstance<span class="token punctuation">,</span> SagaInstanceMap<span class="token operator">&gt;</span><span class="token punctuation">(</span>_connectionString<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> repository <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">EntityFrameworkSagaRepository</span><span class="token operator">&lt;</span>SagaInstance<span class="token operator">&gt;</span><span class="token punctuation">(</span>
+    contextFactory<span class="token punctuation">,</span> optimistic<span class="token punctuation">:</span> <span class="token keyword">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// true For Optimistic Concurrency, false is default for pessimistic</span>
+</code></pre>
+<p>Lastly, the snippet below is <em>only needed for optimistic concurrency</em>, because the saga 
+should retry processing if failure occurred when writing to the database. 
+This snippet is adding <a href="../../usage/retries.html">retry policies</a> middleware to the
+saga receive endpoint from the <a href="#specifying-saga-persistence">first section</a>.</p>
+<pre class="language-"><code class="lang-csharp">x<span class="token punctuation">.</span><span class="token function">ReceiveEndpoint</span><span class="token punctuation">(</span>host<span class="token punctuation">,</span> <span class="token string">&quot;shopping_cart_state&quot;</span><span class="token punctuation">,</span> e <span class="token operator">=</span><span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">UseRetry</span><span class="token punctuation">(</span>x <span class="token operator">=</span><span class="token operator">&gt;</span> 
+        <span class="token punctuation">{</span>
+            x<span class="token punctuation">.</span><span class="token generic-method function">Handle<span class="token punctuation">&lt;</span>DbUpdateConcurrencyException<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            x<span class="token punctuation">.</span><span class="token function">Interval</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> TimeSpan<span class="token punctuation">.</span><span class="token function">FromMilliseconds</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Add the retry middleware for optimistic concurrency</span>
+    e<span class="token punctuation">.</span><span class="token function">StateMachineSaga</span><span class="token punctuation">(</span>sagaStateMachine<span class="token punctuation">,</span> repository<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Hence, that if you have retry policy without an exception filter, it will also handle
+the concurrency exception, so explicit configuration is not required in this case.</p>
+<h3 id="mongodb">MongoDB</h3>
+<p>MongoDB is an easy to use saga repository, because setup is easy. There is no need for class mapping, 
+the saga instances can be persisted easily using a MongoDB collection.</p>
+<h4 id="concurrency">Concurrency</h4>
+<p>MongoDb saga persistence requires that saga instance classes implement <code>IVersionedSaga</code> interface.
+This interface has a <code>Version</code> property, which allows the saga persistence to handle optimistic
+concurrency.</p>
+<h4 id="configuration-and-usage">Configuration and usage</h4>
+<pre class="language-"><code class="lang-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SagaInstance</span> <span class="token punctuation">:</span> SagaStateMachineInstance<span class="token punctuation">,</span> IVersionedSaga
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token function">SagaInstance</span><span class="token punctuation">(</span>Guid correlationId<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        CorrelationId <span class="token operator">=</span> correlationId<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">protected</span> <span class="token function">SagaInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">string</span> CurrentState <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">string</span> ServiceName <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> Guid CorrelationId <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> Version <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The saga repository is created using the simple syntax:</p>
+<pre class="language-"><code class="lang-csharp"><span class="token keyword">var</span> database <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MongoClient</span><span class="token punctuation">(</span><span class="token string">&quot;mongodb://127.0.0.1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">GetDatabase</span><span class="token punctuation">(</span><span class="token string">&quot;sagas&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> repository <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MongoDbSagaRepository</span><span class="token operator">&lt;</span>SagaInstance<span class="token operator">&gt;</span><span class="token punctuation">(</span>database<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Each saga instance will be placed in a collection specific to the instance type.</p>
+<h3 id="nhibernate">NHibernate</h3>
+<p>NHibernate is a widely used ORM and it is supported by MassTransit for saga storage. 
+The example below shows the code-first approach to using NHibernate for saga persistence.</p>
+<h4 id="concurrency">Concurrency</h4>
+<p>NHibernate natively supports multiple concurrency handling mechanisms.
+The easiest is probably adding a <code>Version</code> property of type <code>int</code> to the saga instance class
+and map it to the column with the same name. NHibernate will use it by default.</p>
+<h4 id="configuration-and-usage">Configuration and usage</h4>
+<pre class="language-"><code class="lang-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SagaInstance</span> <span class="token punctuation">:</span> SagaStateMachineInstance
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token function">SagaInstance</span><span class="token punctuation">(</span>Guid correlationId<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        CorrelationId <span class="token operator">=</span> correlationId<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">protected</span> <span class="token function">SagaInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">string</span> CurrentState <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">string</span> ServiceName <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> Guid CorrelationId <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> Version <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span> <span class="token comment" spellcheck="true">// for optimistic concurrency</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SagaInstanceMap</span> <span class="token punctuation">:</span> SagaClassMapping<span class="token operator">&lt;</span>SagaInstance<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token function">SagaInstanceMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">Property</span><span class="token punctuation">(</span>x <span class="token operator">=</span><span class="token operator">&gt;</span> x<span class="token punctuation">.</span>CurrentState<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">Property</span><span class="token punctuation">(</span>x <span class="token operator">=</span><span class="token operator">&gt;</span> x<span class="token punctuation">.</span>ServiceName<span class="token punctuation">,</span> x <span class="token operator">=</span><span class="token operator">&gt;</span> x<span class="token punctuation">.</span><span class="token function">Length</span><span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">Property</span><span class="token punctuation">(</span>x <span class="token operator">=</span><span class="token operator">&gt;</span> x<span class="token punctuation">.</span>Version<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// for optimistic concurrency</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The <code>SagaClassMapping</code> base class maps the <code>CorrelationId</code> of the saga, and handles some of the basic 
+bootstrapping of the class map. All other properties, including the property for the <code>CurrentState</code> 
+(if you&apos;re using state machine sagas), must be mapped by the developer. Once mapped, the <code>ISessionFactory</code> 
+can be created using NHibernate directly. From the session factory, the saga repository can be created.</p>
+<blockquote>
+<p>Important:
+The <code>SagaClassMapping</code> has default mapping for the <code>CorrelationId</code> as a database generated primary key.
+If you use your own mapping, you must follow the same convention, otherwise there is a big chance to
+get deadlock exceptions in case of high throughput.</p>
+</blockquote>
+<pre class="language-"><code class="lang-csharp">ISessionFactory sessionFactory <span class="token operator">=</span> <span class="token function">CreateSessionFactory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> repository <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">NHibernateSagaRepository</span><span class="token operator">&lt;</span>SagaInstance<span class="token operator">&gt;</span><span class="token punctuation">(</span>sessionFactory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="redis">Redis</h3>
+<p>Redis is a very popular key-value store, which is known for being very fast.</p>
+<p>Redis does not support queries, therefore Redis saga persistence only supports correlation by id. 
+If you try to use correlation by expressions, you will get a &quot;not implemented&quot; exception.</p>
+<p>Saga persistence for Redis uses <code>ServiceStack.Redis</code> library and it support both BSD-licensed v3.9.71 
+and the latest commercial versions as well.</p>
+<p>Saga instance class must implement <code>IHasGuid</code> interface and the <code>Id</code> property, that must return the 
+value of the <code>CorrelationId</code> property:</p>
+<pre class="language-"><code class="lang-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SagaInstance</span> <span class="token punctuation">:</span> 
+    SagaStateMachineInstance<span class="token punctuation">,</span> IHasGuidId
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> Guid CorrelationId <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> Guid Id <span class="token operator">=</span><span class="token operator">&gt;</span> CorrelationId<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">string</span> CurrentState <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">string</span> CustomData <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="concurrency">Concurrency</h4>
+<p>Redis saga persistence does not acquire locking on the database record when writing it so potentially 
+you can have write conflict in case the saga is updating its state frequently (hundreds of times per second). 
+To resolve this, the saga instance can implement the <code>IVersionedSaga</code> interface and include the Version property:</p>
+<pre class="language-"><code class="lang-csharp"><span class="token keyword">public</span> <span class="token keyword">int</span> Version <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre>
+<p>When the version of the instance that is being updated is lower than the expected version, 
+the saga repository will trow an exception and force the message to be retried, potentially resolving the issue.</p>
+<h4 id="redis-client-initialization">Redis client initialization</h4>
+<p>The Redis saga repository requires <code>ServiceStack.Redis.IRedisClientsManager</code> as constructor parameter. 
+For containerless initialization the code would look like:</p>
+<pre class="language-"><code class="lang-csharp"><span class="token keyword">var</span> redisConnectionString <span class="token operator">=</span> <span class="token string">&quot;redis://localhost:6379&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> repository <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RedisSagaRepository</span><span class="token operator">&lt;</span>SagaInstance<span class="token operator">&gt;</span><span class="token punctuation">(</span>
+    <span class="token keyword">new</span> <span class="token class-name">RedisManagerPool</span><span class="token punctuation">(</span>redisConnectionString<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>If you use a container, you can use the code like this (example for Autofac):</p>
+<pre class="language-"><code class="lang-csharp"><span class="token keyword">var</span> redisConnectionString <span class="token operator">=</span> <span class="token string">&quot;redis://localhost:6379&quot;</span><span class="token punctuation">;</span>
+builder<span class="token punctuation">.</span><span class="token generic-method function">Register<span class="token punctuation">&lt;</span>IRedisClientsManager<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span>c <span class="token operator">=</span><span class="token operator">&gt;</span> 
+    <span class="token keyword">new</span> <span class="token class-name">RedisManagerPool</span><span class="token punctuation">(</span>redisConnectionString<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SingleInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+builder<span class="token punctuation">.</span><span class="token function">RegisterGeneric</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>RedisSagaRepository<span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">As</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>ISagaRepository<span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SingleInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="marten">Marten</h3>
+<p><a href="http://jasperfx.github.io/marten/" target="_blank">Marten</a> is an open-source library that provides an API to the PostgreSQL <a href="https://www.postgresql.org/docs/9.5/static/functions-json.html" target="_blank">JSONB storage</a>, influenced by
+RavenDb client API. It allows to use PostgreSQL as schema-less NoSQL document storage. Unlike typical document
+databases, PostgreSQL JSONB storage provides you the ACID-compliant transactional store with full consistency.</p>
+<p>To use Marten and PostgreSQL as saga persistence, you need to install <code>MassTransit.Marten</code> NuGet package and
+add some code.</p>
+<p>First, your saga state class needs to mark the correlationId property with the <code>[Identity]</code> attribute. By this
+you inform Marten that correlationId will be used as the primary key.</p>
+<pre class="language-"><code class="lang-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SampleSaga</span> <span class="token punctuation">:</span> ISaga
+<span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>Identity<span class="token punctuation">]</span>
+    <span class="token keyword">public</span> Guid CorrelationId <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">string</span> State <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">string</span> SomeProperty <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Then you need to initialize the document store and the repository. Repository needs the store as its constructor
+parameter.</p>
+<pre class="language-"><code class="lang-csharp"><span class="token keyword">var</span> connectionString <span class="token operator">=</span>
+    <span class="token string">&quot;server=localhost;port=5432;database=test;user id=test;password=test;&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> store <span class="token operator">=</span> DocumentStore<span class="token punctuation">.</span><span class="token function">For</span><span class="token punctuation">(</span>connectionString<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> repository <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MartenSagaRepository</span><span class="token operator">&lt;</span>SampleSaga<span class="token operator">&gt;</span><span class="token punctuation">(</span>store<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>If you use a container, you can use the code like this (example for Autofac):</p>
+<pre class="language-"><code class="lang-csharp"><span class="token keyword">var</span> connectionString <span class="token operator">=</span>
+    <span class="token string">&quot;server=localhost;port=5432;database=test;user id=test;password=test;&quot;</span><span class="token punctuation">;</span>
+builder<span class="token punctuation">.</span><span class="token generic-method function">Register<span class="token punctuation">&lt;</span>IDocumentStore<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span>c <span class="token operator">=</span><span class="token operator">&gt;</span> DocumentStore<span class="token punctuation">.</span><span class="token function">For</span><span class="token punctuation">(</span>connectionString<span class="token punctuation">)</span><span class="token punctuation">;</span>
+builder<span class="token punctuation">.</span><span class="token function">RegisterGeneric</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>MartenSagaRepository<span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">As</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>ISagaRepository<span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SingleInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Marten will create the necessary tables for you. This type of saga repository
+supports correlation by id and custom expressions.</p>
+<h4 id="concurrency">Concurrency</h4>
+<p>Marten supports optimistic concurrency by using an eTag-like version field in the metadata.
+This means that the saga instance class does not need any additional fields for version.</p>
+<p>There are two ways to use this feature:</p>
+<p>1) Apply <code>[UseOptimisticConcurrency]</code> attribute to the saga instance class</p>
+<pre class="language-"><code class="lang-csharp"><span class="token punctuation">[</span>UseOptimisticConcurrency<span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SampleSaga</span> <span class="token punctuation">:</span> ISaga
+<span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>Identity<span class="token punctuation">]</span>
+    <span class="token keyword">public</span> Guid CorrelationId <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ol>
+<li><p>Configure the store to use optimistic concurrency for your saga instance class</p>
+<pre class="language-"><code class="lang-csharp"><span class="token keyword">var</span> store <span class="token operator">=</span> DocumentStore<span class="token punctuation">.</span><span class="token function">For</span><span class="token punctuation">(</span>_ <span class="token operator">=</span><span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// Adds optimistic concurrency checking to Issue</span>
+  _<span class="token punctuation">.</span>Schema<span class="token punctuation">.</span><span class="token generic-method function">For<span class="token punctuation">&lt;</span>SampleSaga<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">UseOptimisticConcurrency</span><span class="token punctuation">(</span><span class="token keyword">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ol>
+<h3 id="azure-service-bus">Azure Service Bus</h3>
+<p>Azure Service Bus provides a feature called <em>message sessions</em>, to process multiple messages at once and 
+to store some state on a temporary basis, which can be retrieved by some key.</p>
+<p>The latter give us an ability to use this feature as saga state storage. Using message sessions
+as saga persistence, you can only use Azure Service Bus for both messaging and saga persistence purposes,
+without needing any additional infrastructure.</p>
+<p>There is a limitation for using message sessions - this feature is not supported for AMQP transport.</p>
+<p>You have to explicitly enable message sessions when configuring the endpoint, and use parameterless
+constructor to instantiate the saga repository.</p>
+<p>Here is the basic sample of how to use the Azure Service Bus message session as saga repository:</p>
+<pre class="language-"><code class="lang-csharp"><span class="token keyword">var</span> sagaStateMachine <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MySagaStateMachine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> repository <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MessageSessionSagaRepository</span><span class="token operator">&lt;</span>MySaga<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+sbc<span class="token punctuation">.</span><span class="token function">ReceiveEndpoint</span><span class="token punctuation">(</span>host<span class="token punctuation">,</span> <span class="token string">&quot;test_queue&quot;</span><span class="token punctuation">,</span> ep <span class="token operator">=</span><span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+    ep<span class="token punctuation">.</span>RequiresSession <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+    ep<span class="token punctuation">.</span><span class="token function">StateMachineSaga</span><span class="token punctuation">(</span>sagaStateMachine<span class="token punctuation">,</span> repository<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>As mentioned before, the message session allows storing and retrieving any state by some unique key.
+This means that this type of saga persistence only support correlation by id. So, similar to Redis
+saga persistence, you cannot use <code>CorrelateBy</code> to specify how to find the saga instance, but only
+<code>CorrelateById</code>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="automatonymous.html" class="navigation navigation-prev " aria-label="Previous page: Automatonymous">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../courier/" class="navigation navigation-next " aria-label="Next page: Courier">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Persistence","level":"3.1.2","depth":2,"next":{"title":"Courier","level":"3.2","depth":1,"path":"advanced/courier/README.md","ref":"advanced/courier/README.md","articles":[{"title":"Activities","level":"3.2.1","depth":2,"path":"advanced/courier/activities.md","ref":"advanced/courier/activities.md","articles":[]},{"title":"Builder","level":"3.2.2","depth":2,"path":"advanced/courier/builder.md","ref":"advanced/courier/builder.md","articles":[]},{"title":"Execution","level":"3.2.3","depth":2,"path":"advanced/courier/execute.md","ref":"advanced/courier/execute.md","articles":[]},{"title":"Events","level":"3.2.4","depth":2,"path":"advanced/courier/events.md","ref":"advanced/courier/events.md","articles":[]},{"title":"Subscriptions","level":"3.2.5","depth":2,"path":"advanced/courier/subscriptions.md","ref":"advanced/courier/subscriptions.md","articles":[]}]},"previous":{"title":"Automatonymous","level":"3.1.1","depth":2,"path":"advanced/sagas/automatonymous.md","ref":"advanced/sagas/automatonymous.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","expandable-chapters"],"root":"docs","styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/MassTransit/MassTransit/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/masstransit/masstransit/tree/master/docs"},"theme-default":{"styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"MassTransit","gitbook":"3.2.2"},"file":{"path":"advanced/sagas/persistence.md","mtime":"2018-03-27T09:16:48.360Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-03-27T09:20:10.372Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-anchorjs/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
