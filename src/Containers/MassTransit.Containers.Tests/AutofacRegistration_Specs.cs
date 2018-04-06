@@ -34,11 +34,9 @@ namespace MassTransit.Containers.Tests
             BusHandle busHandle = await bus.StartAsync();
             try
             {
-                ISendEndpoint endpoint = await bus.GetSendEndpoint(new Uri("loopback://localhost/input_queue"));
-
                 const string name = "Joe";
 
-                await endpoint.Send(new SimpleMessageClass(name));
+                await bus.Publish(new SimpleMessageClass(name));
 
                 SimpleConsumer lastConsumer = await SimpleConsumer.LastConsumer;
                 lastConsumer.ShouldNotBe(null);
@@ -53,6 +51,10 @@ namespace MassTransit.Containers.Tests
 
                 lastConsumer.Dependency.SomethingDone
                     .ShouldBe(true); //Dependency was disposed before consumer executed");
+
+                var called = await _consumeObserver.VerifyCalled;
+                called
+                    .ShouldBe(true); //"ILifetimeScope in found in context payload"
             }
             finally
             {
@@ -66,13 +68,16 @@ namespace MassTransit.Containers.Tests
         }
 
         IContainer _container;
+        ValidateMessageConsumerHasLifestyle _consumeObserver;
 
         [OneTimeSetUp]
         public void Setup()
         {
+            _consumeObserver = new ValidateMessageConsumerHasLifestyle();
+
             var builder = new ContainerBuilder();
 
-            builder.RegisterModule<BusModule>();
+            builder.RegisterModule(new BusModule(_consumeObserver));
             builder.RegisterModule<ConsumerModule>();
 
             _container = builder.Build();
@@ -96,12 +101,21 @@ namespace MassTransit.Containers.Tests
         class BusModule :
             Module
         {
+            ValidateMessageConsumerHasLifestyle _consumeObserver;
+
+            public BusModule(ValidateMessageConsumerHasLifestyle consumeObserver)
+            {
+                _consumeObserver = consumeObserver;
+            }
+
             protected override void Load(ContainerBuilder builder)
             {
                 builder.Register(context =>
-                {
-                    return Bus.Factory.CreateUsingInMemory(x => x.ReceiveEndpoint("input_queue", e => e.LoadFrom(context)));
-                })
+                    {
+                        var bus = Bus.Factory.CreateUsingInMemory(x => x.ReceiveEndpoint("input_queue", e => e.LoadFrom(context)));
+                        bus.ConnectConsumeObserver(_consumeObserver);
+                        return bus;
+                    })
                     .As<IBus>()
                     .As<IBusControl>()
                     .OnRelease(control => control.Stop())
@@ -115,5 +129,24 @@ namespace MassTransit.Containers.Tests
         {
             _container.Dispose();
         }
+    }
+
+
+    public class ValidateMessageConsumerHasLifestyle : IConsumeObserver
+    {
+        static readonly TaskCompletionSource<bool> _verifyCalled = new TaskCompletionSource<bool>();
+
+        public Task<bool> VerifyCalled => _verifyCalled.Task;
+
+        public Task ConsumeFault<T>(ConsumeContext<T> context, Exception exception) where T : class => Task.CompletedTask;
+
+        public Task PostConsume<T>(ConsumeContext<T> context) where T : class
+        {
+            _verifyCalled.TrySetResult(context.TryGetPayload<ILifetimeScope>(out var _));
+
+            return Task.CompletedTask;
+        }
+
+        public Task PreConsume<T>(ConsumeContext<T> context) where T : class => Task.CompletedTask;
     }
 }
