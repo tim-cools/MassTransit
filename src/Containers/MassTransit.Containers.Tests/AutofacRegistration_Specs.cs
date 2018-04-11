@@ -91,7 +91,8 @@ namespace MassTransit.Containers.Tests
             {
                 builder.RegisterType<SimpleConsumer>();
                 builder.RegisterType<SimpleConsumerDependency>()
-                    .As<ISimpleConsumerDependency>();
+                    .As<ISimpleConsumerDependency>()
+                    .InstancePerLifetimeScope();
                 builder.RegisterType<AnotherMessageConsumerImpl>()
                     .As<AnotherMessageConsumer>();
             }
@@ -142,7 +143,10 @@ namespace MassTransit.Containers.Tests
 
         public Task PostConsume<T>(ConsumeContext<T> context) where T : class
         {
-            _verifyCalled.TrySetResult(context.TryGetPayload<ILifetimeScope>(out var _));
+            var tryGetPayload = context.TryGetPayload<ILifetimeScope>(out var lifetimeScope);
+            var simpleConsumerDependency = lifetimeScope?.Resolve<ISimpleConsumerDependency>();
+
+            _verifyCalled.TrySetResult(tryGetPayload && simpleConsumerDependency.SomethingDone);
 
             return Task.CompletedTask;
         }
