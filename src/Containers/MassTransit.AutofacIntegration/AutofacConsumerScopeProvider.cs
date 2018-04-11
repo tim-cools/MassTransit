@@ -70,7 +70,9 @@ namespace MassTransit.AutofacIntegration
             var lifetimeScope = parentLifetimeScope.BeginLifetimeScope(_name, builder => builder.ConfigureScope(context));
             try
             {
-                ConsumerConsumeContext<TConsumer, T> consumerContext = lifetimeScope.GetConsumerScope<TConsumer, T>(context);
+                var consumerContext = lifetimeScope.GetConsumerScope<TConsumer, T>(context);
+
+                context.GetOrAddPayload(() => lifetimeScope);
 
                 return new CreatedConsumerScopeContext<ILifetimeScope, TConsumer, T>(lifetimeScope, consumerContext);
             }
